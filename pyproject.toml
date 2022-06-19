@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "ansible-docker-image-connection-plugin"
+version = "1.0.0"
+description = "Docker image-based dynamic hosts for ansible"
+license = "MIT"
+authors = [
+    "Artem Novikov <artnew@list.ru>",
+]
+readme = "README.md"
+repository = "https://github.com/reartnew/ansible-docker-image-connection-plugin"
+classifiers = [
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+tox = "*"
+pytest-pylint = "*"
+pylint-quotes = "*"
+pytest-mypy = "*"
+pytest-black = "*"
+pytest-bandit = "*"
+tox-poetry = "*"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "src",
+    "tests",
+]
+addopts = """
+--pylint
+--mypy
+--black
+--bandit
+"""
+bandit_targets = ["src"]
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
