@@ -1,19 +1,21 @@
 [tool.poetry]
-name = "ansible-docker-image-connection-plugin"
+name = "ansible-docker-ci"
 version = "1.0.0"
-description = "Docker image-based dynamic hosts for ansible"
+description = "Docker image-based dynamic hosts CI utilites for ansible"
 license = "MIT"
 authors = [
     "Artem Novikov <artnew@list.ru>",
 ]
 readme = "README.md"
-repository = "https://github.com/reartnew/ansible-docker-image-connection-plugin"
+repository = "https://github.com/reartnew/ansible-docker-ci"
 classifiers = [
     "Typing :: Typed",
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+docker = "^5.0.3"
+class-interference = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
@@ -24,6 +26,8 @@ pytest-mypy = "*"
 pytest-black = "*"
 pytest-bandit = "*"
 tox-poetry = "*"
+ansible = "^5.9.0"
+types-PyYAML = "^6.0.8"
 
 [tool.pytest.ini_options]
 testpaths = [
