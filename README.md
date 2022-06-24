@@ -2,6 +2,10 @@
 
 Docker image-based dynamic hosts for ansible.
 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ansible-docker-ci)
+[![PyPI version](https://badge.fury.io/py/ansible-docker-ci.svg)](https://badge.fury.io/py/ansible-docker-ci)
+![Tests](https://github.com/reartnew/ansible-docker-ci/workflows/tests/badge.svg)
+
 ## Installation
 
 ```shell
