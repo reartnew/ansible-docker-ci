@@ -14,3 +14,13 @@ pip install ansible-docker-ci
 # Add plugin file to your connection plugins directory
 echo "from ansible_docker_ci.image.connection.plugin import *" > ./connection_plugins/docker_image.py
 ```
+
+## Usage
+```yaml
+# Possible inventory file
+all:
+  hosts:
+    my_dynamic_python:
+      ansible_connection: docker_image
+      ansible_docker_image: python:3
+```
